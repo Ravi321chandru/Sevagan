@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Sevagan</title>
+
+    <link rel="icon" href="images/Sevagan.jpg">
+
+</head>
+<body>
+<div id="reader" width="600px"></div>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>     
+
+<script src="js/index.js"></script> 
+<script src="js/verification.js"></script> 
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+
+<script>
+const html5QrCode = new Html5Qrcode("reader");
+const qrCodeSuccessCallback = (decodedText, decodedResult) => {
+   
+    if(decodedText!=null){
+        
+      qrprocess(decodedText);
+
+    }
+
+   
+};
+
+const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+
+// If you want to prefer front camera
+html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
+
+
+
+</script>
+
+</body>
+</html>

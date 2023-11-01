@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT VOICEBOT</title>
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="icon" href="images/Sevagan.jpg">
+
+</head>
+<style>
+body {
+background-image: url('css/loading5.gif'); background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+}
+</style>
+<body>
+<header >INFORMATION TECHNOLOGY VOICE BOT</header>
+<footer class="ml3">Designed and Developed by HARIHARAN S, ARAVINDH R &
+SATHIYAMOORTHI S.R</footer>
+<section class="main">
+<div class="user-area">
+<img src="images/user.png">
+</div>
+<div class="chatarea-main">
+<div class="chatarea-outer">
+<!-- <div class="chatarea-inner user">Hello hi, how area you, i am good. What about you!</div>
+<div class="chatarea-inner chatbot">Hello hi, how area you, i am good. What about you!</div>
+<div class="chatarea-inner user">Hello hi, how area you, i am good. What about you!</div> -->
+</div>
+</div>
+<div class="chatbot-area">
+<img src="images/chatbot.png">
+</div>
+<button id="mic"><i class="flaticon-microphone"></i></button>
+</section>
+<script src="js/main.js"></script>
+
+
+<style>
+    @font-face {
+font-family: 'Roboto-Regular';
+src: url('../fonts/Roboto-Regular.eot');
+src: local('☺ '), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/RobotoRegular.ttf') format('truetype'), url('../fonts/Roboto-Regular.svg') format('svg');
+font-weight:
+normal; fontstyle: normal;
+}
+@font-face {
+font-family: "Flaticon";
+src: url("../fonts/Flaticon.eot");
+src: url("../fonts/Flaticon.eot?#iefix") format("embeddedopentype"), url("../fonts/Flaticon.woff2") format("woff2"),
+url("../fonts/Flaticon.woff") format("woff"),
+url("../fonts/Flaticon.ttf") format("truetype"),
+url("../fonts/Flaticon.svg#Flaticon") format("svg");
+font-weight:
+normal; fontstyle: normal;
+}
+@media screen and (-webkit-min-device-pixelratio:0) { @font-face {
+font-family: "Flaticon";
+src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+}
+}
+
+
+
+
+.flaticon-microphone:before { content: "\f100"; }
+*{margin: 0;padding: 0;box-sizing: borderbox;} body{font-family: 'Roboto-Regular';}
+header {
+height:
+60px;
+background: rgb(255, 255,
+255); color: #03283B;
+text-align:
+center; line-height: 60px;
+font-size: 30px;
+box-shadow: 10px 0 5px
+#b9b7b7; width: 100%;
+position:
+fixed; zindex: 2;
+}
+.ml3 {
+font-family:-applesystem, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+sans- serif;
+position:
+fixed; bottom:
+5px; width:
+auto;
+background-color: #fff;
+color:#03283B;
+font-weight:
+200; fontsize: 1em;
+}
+.main {
+width: 100%;
+float: left;
+margin-top:
+60px; padding:
+30px 0;
+}
+.main button {
+background:
+#ff3b3b; padding:
+15px; borderradius: 50%;
+box-shadow: 0 0 10px #666;
+position: fixed;
+right: 20px;
+bottom:
+20px;
+border:
+none; color:
+#fff; cursor:
+pointer;
+}
+.main button:focus{outline: none;}
+.container
+{ width:
+85%;
+margin: 0 auto;
+}
+.user-area, .chatbotarea { width: 20%;
+height: calc(100vh -
+38
+60px); margin-right:
+15px; display: flex;
+align-items:
+center;
+position:
+fixed; left:
+80px;
+index: 99999;
+}
+.chatbotarea {
+float:
+right;
+right:
+80px;
+left:
+auto;
+}
+.user-area
+img{
+width:
+70%;
+}
+.chatbot-area img
+{ width: 100%;
+}
+.user-area img{left: 0;}
+.chatarea-main {
+width: 42%;
+margin: 0 auto;
+}
+.chatarea-outer
+{ width:
+100%; float:
+left;
+}
+.chatbot-area .chatarea-main{float: left;}
+.chatarea.use
+r { float:
+right;
+width:
+50%;
+padding: 20px 0;
+}
+.chatareainner {
+float: left;
+width:
+60%;
+padding:
+10px;
+color: rgb(255, 255,
+39
+255); position:
+relative; margin: 5px
+0;
+}
+.chatarea-inner.user{
+background:
+#6522A4;
+}
+.chatareainner.chatbot{
+background:
+#466EB6; float:
+right;
+}
+.chatareainner.user:before {
+content: '';
+position: absolute;
+border-right: 20px solid
+#6522A4; border-top: 20px
+solid transparent;
+border-bottom: 0px solid
+transparent; bottom: 0;
+left: -20px;
+}
+.chatareainner.chatbot:before {
+content: '';
+position: absolute;
+border-left: 20px solid #466EB6;
+border-top: 20px solid
+transparent; border-bottom: 0px
+solid transparent; bottom: 0;
+right: -20px;
+}
+.chatbot-area .chatarea-inner{float: left;}
+.main stop{
+background:
+#048f4e; padding:
+15px; borderradius: 50%;
+box-shadow: 0 0 10px #666;
+position: fixed;
+right: 20px;
+bottom:
+70px;
+border:
+none; color:
+#fff; cursor:
+pointer;
+}
+</style>
+
+<script>
+    let mic = document.getElementById("mic");
+let chatareamain = document.querySelector('.chatareamain'); let chatareaouter =
+document.querySelector('.chatarea-outer');
+let intro=["good morning"]
+let IT = ["The Department of Information Technology was established in the year 2011 with the objective of producing."];
+let thank = ["Most welcome","Not an issue","Its my pleasure","Mention not"];
+let college = ["The K S R Institute for Engineering and Technology is another landmark of the Aarthi Educational &."];
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+function
+showusermsg(usermsg){ let
+output = '';
+output += `<div class="chatarea-inner
+user">${usermsg}</div>`; chatareaouter.innerHTML +=
+output;
+return chatareaouter;
+}
+function
+showchatbotmsg(chatbotmsg){
+let output = '';
+output += `<div class="chatarea-inner chatbot">${chatbotmsg}</div>`;
+chatareaouter.innerHTML += output;
+return chatareaouter;
+}
+function chatbotvoice(message){
+const speech = new SpeechSynthesisUtterance();
+41
+speech.text = "This is test message";
+if(message.includes('who are you')){
+let finalresult = intro[Math.floor(Math.random() *
+intro.length)]; speech.text = finalresult;
+}
+if(message.includes('fine')){
+let finalresult = help[Math.floor(Math.random() *
+help.length)]; speech.text = finalresult;
+}
+if(message.includes('how are you' || 'how are you doing today')){
+let finalresult = greetings[Math.floor(Math.random() *
+greetings.length)]; speech.text = finalresult;
+}
+if(message.includes('Vision and Mission')){
+let finalresult = VM[Math.floor(Math.random() *
+VM.length)]; speech.text = finalresult;
+}
+if(message.includes('about information technology'||'Informationtechnology')){ let finalresult =
+IT[Math.floor(Math.random() * IT.length)];
+window.open("http://www.ksriet.ac.in/page/it-introduction.html");
+speech.text = finalresult;
+}
+if(message.includes('thank you' || 'thank you so much')){
+let finalresult = thank[Math.floor(Math.random() * thank.length)];
+speech.text = finalresult;
+}
+if(message.includes('college' || 'ksriet')){
+let finalresult = college[Math.floor(Math.random() *
+college.length)];
+window.open("http://www.ksriet.ac.in/page/aboutus.html");
+speech.text = finalresult;
+}
+if(message.includes('training and placement')){
+let finalresult=tp[Math.floor(Math.random()*tp.length)];
+window.open("http://www.ksriet.ac.in/page/training-andplacements.html"); speech.text=finalresult;
+}
+if(message.includes('faculty info')){
+let finalresult = fi[Math.floor(Math.random() * fi.length)];
+window.open("http://www.ksriet.ac.in/page/it-facultyinformation.html"); speech.text = finalresult;
+}
+if(message.includes('exit' ||
+'close')){ window.close();
+}
+window.speechSynthesis.speak(speech);
+chatareamain.appendChild(showchatbotmsg(speech.text));
+}
+42
+recognition.onresult=function(
+e){ let resultIndex =
+e.resultIndex;
+let transcript = e.results[resultIndex][0].transcript;
+chatareamain.appendChild(showusermsg(transcript));
+chatbotvoice(transcript);
+console.log(transcript);
+}
+recognition.onend=function(){
+mic.style.background="#ff3b3b";
+}
+mic.addEventListener("click",
+function(){
+mic.style.background='#39c81f';
+recognition.start();
+console.log("Activated");
+}) 
+</script>
+
+</body>
+</html> 

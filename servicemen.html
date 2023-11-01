@@ -1,0 +1,129 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Sevagan</title>
+    <link rel="stylesheet" href="css/style1.css">
+
+    <link rel="icon" href="images/Sevagan.jpg">
+
+</head>
+<body>
+
+     
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>     
+
+        <script src="js/index.js"></script>
+
+            <div class="container" id="container">
+              <!-- sign in page -->
+              <div class="form-container sign-in-container">
+                <form method="POST" action="#" class="form" id="login" return false">
+                  <h1 class="form__title">Login</h1>
+                  <div class="form__input-group">
+                    <label for="username">Username: </label>
+                    <input type="text" class="form__input" name="username" id="username" required> 
+                  </div>
+                  <div class="form__input-group">
+                    <label for="pass">Password: </label>
+                    <input type="password" class="form__input" name="pass" id="pass" required> 
+                  </div>
+                  <div class="form__input-group">
+                    <button type="button" id="loginbtn" onclick="login()" class="form__button">Login</button>
+                  </div>
+               </form>
+              </div>
+              
+             <!--  create account page -->
+             <div class="form-container sign-up-container">
+               <form method="POST"action="#" class="form" id="register"  onsubmit="register(); return false" >
+                 <h1 class="form__title">Register</h1>
+                 <div class="form__input-group">
+                    <label for="pass">Name: </label>
+                    <input type="text" class="form__input" name="pass" id="name"  required> 
+                  </div>
+                 <div class="form__input-group">
+                   <label for="username"> Email id: </label>
+                   <input type="text" class="form__input" name="username" id="username1" required>
+                 </div>
+                 <div class="form__input-group">
+                  <label for="username"> Phone: </label>
+                  <input type="phone number" class="form__input" name="username" id="mobileno" required>
+                </div>
+                  <div class="form__input-group">
+                    <label for="pass">Set Password: </label>
+                    <input type="password" class="form__input" name="pass" id="pass1" maxlength="20" required> 
+                  </div>
+                  
+                  <div class="form__input-group">
+                    <button type="button" id="registerbtn" onclick="register()" class="form__button">Register</button>
+                  </div>
+                </form>
+            </div> 
+
+              
+               
+            
+              
+             <div class="overlay-container">
+                  <div class="overlay">
+                      <div class="overlay-panel overlay-left">
+                          <h1>Welcome Back!</h1>
+                          <p>Please login with your personal info</p>
+                          <button class="ghost" id="signIn">Sign In</button>
+                      </div>
+                      <div class="overlay-panel overlay-right">
+                          <h1>Hello, volunteers/servicemen!</h1>
+                          <p>Enter your personal details and start journey with us</p>
+                          <button class="ghost" id="signUp">Sign Up</button>
+                      </div>
+                  </div>
+              </div>
+           </div>
+            <script>
+                const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+            </script>
+            
+
+
+            <script>
+
+              var input12= document.getElementById("pass1");
+              input12.addEventListener("keyup",function(event){
+                if(event.keyCode===13){
+                event.preventDefault();
+                document.getElementById("registerbtn").click();
+                }
+              })
+
+
+              var input12= document.getElementById("pass");
+              input12.addEventListener("keyup",function(event){
+                if(event.keyCode===13){
+                event.preventDefault();
+                document.getElementById("loginbtn").click();
+                }
+              })
+              
+            
+              </script>
+
+          </body>
+          
+</html>

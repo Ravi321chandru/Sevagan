@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+
+	<title>Sevagan</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/servicefinal.js"></script>
+
+    <link rel="icon" href="images/Sevagan.jpg">
+
+</head>
+
+<body>
+
+  <div>
+      <strong><br><br><br><br></Bar><center>Try saying "Volunteer, plumbing, security or<br> any other service you need...</center></strong>
+  </div>
+	<div class="words" contenteditable>
+		<p id="p"></p>
+	</div>
+
+	<script>
+
+		var speech = true;
+		window.SpeechRecognition = window.SpeechRecognition
+						|| window.webkitSpeechRecognition;
+
+		const recognition = new SpeechRecognition();
+		recognition.interimResults = true;
+		const words = document.querySelector('.words');
+		words.appendChild(p);
+
+		recognition.addEventListener('result', e => {
+			const transcript = Array.from(e.results)
+				.map(result => result[0])
+				.map(result => result.transcript)
+				.join('')
+
+			document.getElementById("p").innerHTML = transcript;
+			console.log(transcript);
+
+            if(transcript=="emergency"){
+                console.log("Yes it is emergency")
+                emer();
+            }
+            if(transcript=="plumbing"){
+                plumb();
+            }
+            if(transcript=="cable"){
+                telecom();
+            }
+            if(transcript=="transport"){
+                transport();
+            }
+           
+            if(transcript=="security"){
+                temps();
+            }
+            if(transcript=="volunteer"){
+                volunteer();
+            }
+            if(transcript=="TV"){
+                tele();
+            }
+            if(transcript=="washing machine"){
+                wash();
+            }
+            if(transcript=="AC"){
+                ac();
+            }
+            if(transcript=="fridge"){
+                fridge();
+            }
+            if(transcript=="stove"){
+                IS();
+            }
+            if(transcript=="grainder"){
+                mixer();
+            }
+            if(transcript=="speaker"){
+                speaker();
+            }
+            if(transcript=="engagement"){
+                engage();
+            }
+            if(transcript=="wedding"){
+                wedd();
+            }
+            if(transcript=="mehandi"){
+                mehandi();
+            }
+            if(transcript=="house warming"){
+                house();
+            }
+            if(transcript=="water can"){
+                wcans();
+            }
+            if(transcript=="vehicle water service"){
+                vehi();
+            }
+            if(transcript=="RO"){
+                ro();
+            }
+           
+            
+		});
+		
+		if (speech == true) {
+			recognition.start();
+			recognition.addEventListener('end', recognition.start);
+		}
+	</script>
+</body>
+
+</html>

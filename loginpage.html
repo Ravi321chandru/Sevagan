@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Sevagan</title>
+
+    <link rel="icon" href="images/Sevagan.jpg">
+
+  </head>
+  <body>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>     
+
+    <script src="js/index.js"></script>
+    <script src="js/phoneauth.js"></script>
+
+  
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_EHugAD.json"  background="transparent"  speed="1"  style="width: 400px; height: 600px;"  loop  autoplay></lottie-player>
+
+    </div>
+    <div class="contents order-2 order-md-1">
+
+      <div class="container mt-8">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7">
+            <h2 class="my-5">Welcome.....!!!</h2>
+            <img class="rounded-circle"src="images/Sevagan.jpg" width=150px height="150px"/>
+            <br><br>
+            <h3>Login to <strong>Sevagan</strong></h3>
+            <br>
+            <br>
+            <form action="#" method="post">
+              <div id="phoneentering">
+              <div class="form-group first">
+                <input type="number" class="form-control" placeholder="Your 10-digit number" id="customernumber">
+              </div>
+              <br>
+              <div id="recaptcha-container"></div>
+              <strong id="errorotp" style="color:rgb(245, 7, 7)"></strong>
+              <br>
+              <div>
+                <input type="button" onclick="phoneAuth()" value="Get OTP" class="btn btn-block btn-outline-primary">
+              </div>
+            </div>
+              <div id="otpentering">
+              <div class="form-group last mb-3">
+                <input type="otpenter" class="form-control" placeholder="Enter OTP received" id="otpenter">
+              </div>
+              <strong id="wrongotp" style="color:rgb(245, 7, 7)"></strong>
+              <div class="d-flex mb-5 align-items-center">
+              <input type="button" id="loginotp" onclick="codeverify()" value="Log In" class="btn btn-block btn-primary">
+
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <script>
+
+      var input12= document.getElementById("otpenter");
+      input12.addEventListener("keyup",function(event){
+        if(event.keyCode===13){
+          event.preventDefault();
+          document.getElementById("loginotp").click();
+        }
+      })
+    
+
+    </script>
+  </body>
+</html>
